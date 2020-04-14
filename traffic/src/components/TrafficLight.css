@@ -1,0 +1,36 @@
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.TrafficLight {
+	display: flex;
+	flex-direction: column;
+}
+
+.light {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	opacity: 0.2;
+	margin: 1rem;
+}
+
+.active {
+	opacity: 1;
+}
+
+.green {
+	background-color: green;
+}
+
+.orange {
+	background-color: orange;
+}
+
+.red {
+	background-color: red;
+}
