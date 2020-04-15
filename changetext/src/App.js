@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import ChangeText from "./components/ChangeText";
 import DisplayState from "./components/DisplayState";
+import StepNumber from "./components/StepNumber";
 
 class App extends Component {
 	constructor() {
@@ -16,7 +17,7 @@ class App extends Component {
 
 	onClickButton() {
 		this.setState({
-			display: this.state.display == "block" ? "none" : "block",
+			display: this.state.display === "block" ? "none" : "block",
 		});
 	}
 
@@ -28,6 +29,7 @@ class App extends Component {
 					display={this.state.display}
 					onClick={this.onClickButton}
 				/>
+				<StepNumber />
 			</div>
 		);
 	}
