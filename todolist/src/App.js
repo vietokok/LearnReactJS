@@ -1,53 +1,26 @@
-import React, { Component } from "react";
-import "./App.css";
-import TodoItem from "./components/TodoItem";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-class App extends Component {
-	constructor() {
-		super();
-		this.state = {
-			todoitems: [
-				{ title: "Mua bim bim", isComplete: true },
-				{ title: "Đi đá bóng", isComplete: false },
-				{ title: "Xem phim", isComplete: false },
-			],
-		};
-		this.onItemClicked = this.onItemClicked.bind(this);
-	}
-
-	onItemClicked(item) {
-		return (event) => {
-			const isComplete = item.isComplete;
-			const { todoitems } = this.state;
-			const index = todoitems.indexOf(item);
-			this.setState({
-				todoitems: [
-					...todoitems.slice(0, index),
-					{
-						...item,
-						isComplete: !isComplete,
-					},
-					...todoitems.slice(index + 1),
-				],
-			});
-		};
-	}
-
-	render() {
-		const { todoitems } = this.state;
-		return (
-			<div className="App">
-				{todoitems.length &&
-					todoitems.map((item, index) => (
-						<TodoItem
-							key={index}
-							item={item}
-							onClick={this.onItemClicked(item)}
-						/>
-					))}
-			</div>
-		);
-	}
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;
