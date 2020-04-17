@@ -1,6 +1,6 @@
 ### Example
 
-```
+```javascript
 function App() {
 return (
 	<div className="App">
@@ -15,7 +15,7 @@ return (
 - 'TrafficLight' is a component
 - Abc is a props children of 'TrafficLight'
 
-```
+```javascript
 function TrafficLight() {
     const { children } = this.props;
     return (
