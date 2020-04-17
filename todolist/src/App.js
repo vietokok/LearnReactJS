@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import "./App.css";
-import TodoItem from "./components/TodoItem";
-import Arrow from "./images/arrow.svg";
+import React, { Component } from 'react';
+import './App.css';
+import TodoItem from './components/TodoItem';
+import Arrow from './images/arrow.svg';
 
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			newItem: "",
-			show: "all",
+			newItem: '',
+			show: 'all',
 			todoItems: [],
 		};
 		// Assign objects to functions
@@ -25,7 +25,7 @@ class App extends Component {
 		// closure
 		return (event) => {
 			this.setState({
-				newItem: "",
+				newItem: '',
 				todoItems: [
 					...todoItems.slice(0, index),
 					{
@@ -56,7 +56,7 @@ class App extends Component {
 			}
 
 			this.setState({
-				newItem: "",
+				newItem: '',
 				todoItems: [
 					{ title: text, isComplete: false },
 					...this.state.todoItems,
@@ -113,8 +113,8 @@ class App extends Component {
 		const filterData = todoItems.filter((item) => item.isComplete === false);
 
 		this.setState({
-			newItem: "",
-			show: "all",
+			newItem: '',
+			show: 'all',
 			todoItems: [...filterData],
 		});
 	}
@@ -125,10 +125,10 @@ class App extends Component {
 		let data;
 		// display data following keyword
 		switch (show) {
-			case "active":
+			case 'active':
 				data = todoItems.filter((item) => item.isComplete === false);
 				break;
-			case "completed":
+			case 'completed':
 				data = todoItems.filter((item) => item.isComplete === true);
 				break;
 			default:
@@ -177,13 +177,13 @@ class App extends Component {
 				{todoItems.length > 0 && (
 					<div className="footer">
 						<div className="item-left">{uncheck} items left</div>
-						<button className="all" onClick={this.show("all")}>
+						<button className="all" onClick={this.show('all')}>
 							All
 						</button>
-						<button className="active" onClick={this.show("active")}>
+						<button className="active" onClick={this.show('active')}>
 							Active
 						</button>
-						<button className="completed" onClick={this.show("completed")}>
+						<button className="completed" onClick={this.show('completed')}>
 							Completed
 						</button>
 						{checkHasCheckedTask && (

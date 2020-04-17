@@ -1,15 +1,15 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 // import logo from "./logo.svg";
-import "./App.css";
-import ChangeText from "./components/ChangeText";
-import DisplayState from "./components/DisplayState";
-import StepNumber from "./components/StepNumber";
+import './App.css';
+import ChangeText from './components/ChangeText';
+import DisplayState from './components/DisplayState';
+import StepNumber from './components/StepNumber';
 
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			display: "block",
+			display: 'block',
 		};
 
 		this.onClickButton = this.onClickButton.bind(this);
@@ -17,7 +17,7 @@ class App extends Component {
 
 	onClickButton() {
 		this.setState({
-			display: this.state.display === "block" ? "none" : "block",
+			display: this.state.display === 'block' ? 'none' : 'block',
 		});
 	}
 

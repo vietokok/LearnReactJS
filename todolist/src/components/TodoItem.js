@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import "./TodoItem.css";
-import Check from "../images/check.svg";
-import UnCheck from "../images/uncheck.svg";
-import cx from "classnames";
+import React, { Component } from 'react';
+import './TodoItem.css';
+import Check from '../images/check.svg';
+import UnCheck from '../images/uncheck.svg';
+import cx from 'classnames';
 
 class TodoItem extends Component {
 	render() {
@@ -19,7 +19,7 @@ class TodoItem extends Component {
 					alt="Can't load data"
 				/>
 				<div
-					className={cx("content", {
+					className={cx('content', {
 						done: item.isComplete,
 					})}
 				>

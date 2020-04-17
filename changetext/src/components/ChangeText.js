@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class ChangeText extends Component {
 	constructor() {
 		super();
 		this.state = {
-			value: "",
+			value: '',
 		};
 
 		this.handleChange = this.handleChange.bind(this);

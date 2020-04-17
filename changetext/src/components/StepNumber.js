@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import "./StepNumber.css";
+import React, { Component } from 'react';
+import './StepNumber.css';
 
 class StepNumber extends Component {
 	constructor() {

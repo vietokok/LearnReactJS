@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import "./DisplayState.css";
+import React, { Component } from 'react';
+import './DisplayState.css';
 
 class DisplayState extends Component {
 	render() {
