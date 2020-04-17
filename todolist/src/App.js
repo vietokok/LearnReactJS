@@ -9,11 +9,7 @@ class App extends Component {
 		this.state = {
 			newItem: "",
 			show: "all",
-			todoItems: [
-				{ title: "Go shopping", isComplete: false },
-				{ title: "Playing football", isComplete: false },
-				{ title: "Go swimming", isComplete: false },
-			],
+			todoItems: [],
 		};
 		// Assign objects to functions
 		this.onKeyUp = this.onKeyUp.bind(this);
@@ -26,7 +22,7 @@ class App extends Component {
 		const isComplete = item.isComplete;
 		const { todoItems } = this.state;
 		const index = todoItems.indexOf(item);
-
+		// closure
 		return (event) => {
 			this.setState({
 				newItem: "",
