@@ -5,8 +5,8 @@ function App() {
 return (
 	<div className="App">
 		<TrafficLight>
-               Abc
-           </TraficLight>
+		Abc
+           	</TraficLight>
 	</div>
 );
 }
@@ -17,10 +17,10 @@ return (
 
 ```javascript
 function TrafficLight() {
-    const { children } = this.props;
-    return (
-         // something
-    );
+	const { children } = this.props;
+	return (
+	// something
+	);
 }
 ```
 
