@@ -3,7 +3,6 @@ import React from 'react';
 export default function (Image, grayscale = 0.5) {
 	const percent = grayscale * 100;
 	return function (props) {
-		console.log(props);
 		return (
 			<div
 				className="filter"
